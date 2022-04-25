@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c118e35a-d734-f7c8-0120-4d685dd5e4ec": {
+      "ProjectGuid": "c118e35a-d734-f7c8-0120-4d685dd5e4ec",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "4af8dca1-3bea-e49a-3fbd-74376eaf7fd3": {
+      "ProjectGuid": "4af8dca1-3bea-e49a-3fbd-74376eaf7fd3",
+      "DisplayName": "Unity.2D.Animation.Runtime",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
