@@ -17,15 +17,17 @@ public class meleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    [Header("Attack Sound")]
+    [SerializeField] private AudioClip attackSound;
     //References
     private Animator anim;
-    //private Health playerHealth;
-    //private EnemyPatrol enemyPatrol;
+    private health playerHealth;
+    private enemyPatrol enemyPatrol;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        //enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        enemyPatrol = GetComponentInParent<enemyPatrol>();
     }
 
     private void Update()
@@ -35,15 +37,16 @@ public class meleeEnemy : MonoBehaviour
         //Attack only when player in sight?
         if (PlayerInSight())
         {
-            if (cooldownTimer >= attackCooldown)
+            if (cooldownTimer >= attackCooldown && playerHealth.currentHealth > 0)
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("meleeAttack");
+                soundManager.instance.PlaySound(attackSound);
             }
         }
 
-        //if (enemyPatrol != null)
-        //    enemyPatrol.enabled = !PlayerInSight();
+        if (enemyPatrol != null)
+            enemyPatrol.enabled = !PlayerInSight();
     }
 
     private bool PlayerInSight()
@@ -53,8 +56,8 @@ public class meleeEnemy : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        //if (hit.collider != null)
-        //    playerhe = hit.transform.GetComponent<health>();
+        if (hit.collider != null)
+            playerHealth = hit.transform.GetComponent<health>();
 
         return hit.collider != null;
     }
@@ -65,9 +68,9 @@ public class meleeEnemy : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
-    //private void DamagePlayer()
-    //{
-    //    if (PlayerInSight())
-    //        playerHealth.TakeDamage(damage);
-    //}
+    private void DamagePlayer()
+    {
+        if (PlayerInSight())
+            playerHealth.TakeDamage(damage);
+    }
 }

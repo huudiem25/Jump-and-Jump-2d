@@ -65,14 +65,20 @@
     <Compile Include="Assets\Script\health\health.cs" />
     <Compile Include="Assets\Script\Traps\fireTraps.cs" />
     <Compile Include="Assets\Script\Core\cameraController.cs" />
+    <Compile Include="Assets\Script\Enemy\enemyPatrol.cs" />
     <Compile Include="Assets\Script\Room\Room.cs" />
     <Compile Include="Assets\Script\Traps\enemyDamage.cs" />
     <Compile Include="Assets\Script\Room\door.cs" />
     <Compile Include="Assets\Script\Traps\enemy_Sideway.cs" />
     <Compile Include="Assets\Script\Traps\spikeHead.cs" />
     <Compile Include="Assets\Script\health\healthbar.cs" />
-    <Compile Include="Assets\Script\health\HealthCollectible.cs" />
     <Compile Include="Assets\Script\Enemy\meleeEnemy.cs" />
+    <Compile Include="Assets\Script\health\HealthCollectible.cs" />
+    <Compile Include="Assets\Script\Enemy\rangedEnemy.cs" />
+    <Compile Include="Assets\Script\Enemy\enemyFireballHolder.cs" />
+    <Compile Include="Assets\Script\Core\soundManager.cs" />
+    <Compile Include="Assets\Script\loadingManager.cs" />
+    <Compile Include="Assets\Script\player\playerRespawn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Knight Files\Read Me.txt" />

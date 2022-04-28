@@ -208,6 +208,7 @@ MonoBehaviour:
   - {fileID: 1539818377631553285}
   - {fileID: 1539818377330371251}
   - {fileID: 1539818376827669921}
+  arrowSound: {fileID: 8300000, guid: 74271f2bfd7897c449c134674c95774f, type: 3}
 --- !u!1 &903270699467242055
 GameObject:
   m_ObjectHideFlags: 0
