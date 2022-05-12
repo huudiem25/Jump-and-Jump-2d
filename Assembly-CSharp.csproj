@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C118E35A-D734-F7C8-0120-4D685DD5E4EC}</ProjectGuid>
+    <ProjectGuid>{9CF6EDE1-0EE0-218C-C54E-CB829180C635}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,24 +61,26 @@
     <Compile Include="Assets\Script\Traps\enemyProject.cs" />
     <Compile Include="Assets\Script\player\scriptFireBall.cs" />
     <Compile Include="Assets\Script\player\playerMove.cs" />
+    <Compile Include="Assets\Script\Enemy\rangedEnemy.cs" />
     <Compile Include="Assets\Script\Traps\arrowTraps.cs" />
     <Compile Include="Assets\Script\health\health.cs" />
     <Compile Include="Assets\Script\Traps\fireTraps.cs" />
     <Compile Include="Assets\Script\Core\cameraController.cs" />
     <Compile Include="Assets\Script\Enemy\enemyPatrol.cs" />
+    <Compile Include="Assets\Script\Enemy\enemyFireballHolder.cs" />
     <Compile Include="Assets\Script\Room\Room.cs" />
+    <Compile Include="Assets\Script\loading\loadingManager.cs" />
     <Compile Include="Assets\Script\Traps\enemyDamage.cs" />
     <Compile Include="Assets\Script\Room\door.cs" />
     <Compile Include="Assets\Script\Traps\enemy_Sideway.cs" />
     <Compile Include="Assets\Script\Traps\spikeHead.cs" />
+    <Compile Include="Assets\Script\Core\soundManager.cs" />
     <Compile Include="Assets\Script\health\healthbar.cs" />
     <Compile Include="Assets\Script\Enemy\meleeEnemy.cs" />
-    <Compile Include="Assets\Script\health\HealthCollectible.cs" />
-    <Compile Include="Assets\Script\Enemy\rangedEnemy.cs" />
-    <Compile Include="Assets\Script\Enemy\enemyFireballHolder.cs" />
-    <Compile Include="Assets\Script\Core\soundManager.cs" />
-    <Compile Include="Assets\Script\loadingManager.cs" />
     <Compile Include="Assets\Script\player\playerRespawn.cs" />
+    <Compile Include="Assets\Script\health\HealthCollectible.cs" />
+    <Compile Include="Assets\Script\Moving\MovingPlatForm.cs" />
+    <Compile Include="Assets\Script\Moving\StickyPlatForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Knight Files\Read Me.txt" />
@@ -658,123 +660,123 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{77983ED6-20F7-E64C-FE53-F4381BCA818C}</Project>
+      <Project>{7B7FEBC2-D5BE-6A43-DDF7-236F90B45904}</Project>
       <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{6187DAFB-5CAC-C954-FCC1-65C4A1838677}</Project>
+      <Project>{8BC6F441-92A7-3E79-1A6D-38EC6E6C0053}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{8E1637FC-922A-7EF0-AD8D-C5819ABCB491}</Project>
+      <Project>{370C1F08-42B7-8FC6-EB82-E0D80F08E263}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{ABB4707F-2F92-1A08-C7E9-32ED860F8CA3}</Project>
+      <Project>{4CA631A3-6F4E-4F86-37B6-0ADAA3F76D20}</Project>
       <Name>Unity.2D.PixelPerfect</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{0EA97674-949E-3645-A2A0-FCCE84D96E7F}</Project>
+      <Project>{E1D605C2-6602-FD64-6C0C-1FD08B5E67CB}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PsdPlugin.csproj">
-      <Project>{3C249F65-82BA-A7AD-1B8C-C0A3FFEAA15A}</Project>
+      <Project>{498505A2-EF00-CC8F-D7F4-176D48E51A9C}</Project>
       <Name>PsdPlugin</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{B328590C-061C-107F-64AE-BD5EEA1EC7E2}</Project>
+      <Project>{4A24CB5F-D216-010A-D4E2-FD97936C9C32}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{DB6E047C-3281-2D0A-1A0C-A2273122E828}</Project>
+      <Project>{7F8B13A3-034E-FFD7-B797-721B78796EFF}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{4306C00E-E518-1983-DF96-ABE30EE00EC8}</Project>
+      <Project>{4FDC1C11-0A2D-A5D7-E049-A183D4E1D0BE}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{2BCBFF5D-3B19-AD12-943D-7F9445BD4C23}</Project>
+      <Project>{AD0F7A65-3D62-6490-0310-CAFEB9DF96F8}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{AD34CC63-2A34-C771-2653-4CA78CDE3642}</Project>
+      <Project>{9CAC8B3B-FE6C-4D90-786F-D94043D73751}</Project>
       <Name>Unity.2D.IK.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{8179B721-4F0C-C666-25F9-A7CCF4669091}</Project>
+      <Project>{70AE2567-B91A-D6F0-1E85-4AC88941F821}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
-      <Project>{E0593115-4F90-50A6-17CA-04A520097F1F}</Project>
+      <Project>{89797DF8-5512-37F0-831A-363A85608404}</Project>
       <Name>Unity.2D.Psdimporter.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Path.Editor.csproj">
-      <Project>{768AAD50-834E-92C1-3B8A-1F09AEF761AA}</Project>
+      <Project>{3518CE1D-8485-B20C-612A-A6C8A9813829}</Project>
       <Name>Unity.2D.Path.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{5C446567-7C0A-2523-54FA-8C9A53FB51F9}</Project>
+      <Project>{BEB97C74-B7BC-14FC-78BC-6323782EB3AB}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{FC201091-9376-0BF7-3C43-4B3197F8D3CF}</Project>
+      <Project>{D9ED6D01-67F5-C70C-8B06-70E4691A4197}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{7740A37C-005E-EA0F-5955-E05706277DFF}</Project>
+      <Project>{F792DD9D-58FB-B4DB-2F32-DBC4B6BAEA02}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{E3067104-CA96-BA10-18DA-D17B871AF477}</Project>
+      <Project>{2549440D-0C0F-8D2B-FE32-A6863D594FA3}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{6FE426A2-782F-B910-5645-61921D09CD11}</Project>
+      <Project>{12742635-B819-6341-63EC-BD14B8A48659}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D1C50D51-6813-1F90-F4F3-32CE351714A7}</Project>
+      <Project>{F3AA36B2-A15F-B211-66DE-2C9A004ACE35}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{E29EB431-F284-52BA-E12A-54A5BCA4BDE2}</Project>
+      <Project>{80BB5DA2-7116-47EE-8D6C-17CE46D7C5EF}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.csproj">
-      <Project>{1EB7FA85-90C0-2F16-A568-438D89C59281}</Project>
+      <Project>{209372AF-C440-6235-41D4-9A9E738B39F6}</Project>
       <Name>Unity.2D.Animation.Triangle.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{4AF8DCA1-3BEA-E49A-3FBD-74376EAF7FD3}</Project>
+      <Project>{95C16B02-A9F6-32DE-D2EE-A8E84CF13BB7}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.PixelPerfect.Editor.csproj">
-      <Project>{60095A41-691C-0806-4F76-1A5B714AB077}</Project>
+      <Project>{BACFCAC9-C3C0-447C-6119-1E10B02EB61C}</Project>
       <Name>Unity.2D.PixelPerfect.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{A98C437F-18A9-2381-904F-D103ECFB0281}</Project>
+      <Project>{AB01FFA2-902F-C3D3-A697-5357FB1814BF}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{ADB4494C-2CD8-3E82-1443-3514FF83A442}</Project>
+      <Project>{DFB2AA9A-09FB-2344-7C6A-0CC8E7BC68AD}</Project>
       <Name>Unity.Mathematics.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{EC6885EF-C229-E568-8102-92DCF0AD5CCD}</Project>
+      <Project>{372554E7-EFE8-1628-A6D1-C1D289F13599}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj">
-      <Project>{753508CB-7D04-ED9F-957A-7D7971A2950A}</Project>
+      <Project>{E0458CE3-6D86-208B-35DE-FF910C504582}</Project>
       <Name>Unity.2D.SpriteShape.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{27F1AC29-0013-EDC9-B7C5-03F5EEE1A095}</Project>
+      <Project>{41B24B2D-A280-17C7-9125-C78D7BFFB71F}</Project>
       <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
-      <Project>{A8545DE3-4915-8B28-7678-0AE527FE4833}</Project>
+      <Project>{97A9D921-E360-81C3-ACB4-8F32F0AE9D5C}</Project>
       <Name>Unity.2D.SpriteShape.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

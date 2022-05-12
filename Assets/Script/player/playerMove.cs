@@ -45,10 +45,10 @@ public class playerMove : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
 
         //Flip player when moving left-right
-        if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
-        else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+        if (horizontalInput > 0.02f)
+            transform.localScale = new Vector3(2, 2, 2);
+        else if (horizontalInput < -0.02f)
+            transform.localScale = new Vector3(-2, 2, 2);
 
         //Set animator parameters
         anim.SetBool("run", horizontalInput != 0);
@@ -91,6 +91,8 @@ public class playerMove : MonoBehaviour
 
         if (onWall())
             WallJump();
+        
+
         else
         {
             if (isGrounded())
@@ -124,12 +126,13 @@ public class playerMove : MonoBehaviour
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.2f, groundLayer);
+
         return raycastHit.collider != null;
     }
     private bool onWall()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.2f, wallLayer);
         return raycastHit.collider != null;
     }
     public bool canAttack()

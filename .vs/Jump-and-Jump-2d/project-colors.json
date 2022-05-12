@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9cf6ede1-0ee0-218c-c54e-cb829180c635": {
+      "ProjectGuid": "9cf6ede1-0ee0-218c-c54e-cb829180c635",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "97a9d921-e360-81c3-acb4-8f32f0ae9d5c": {
+      "ProjectGuid": "97a9d921-e360-81c3-acb4-8f32f0ae9d5c",
+      "DisplayName": "Unity.2D.SpriteShape.Runtime",
+      "ColorIndex": 1
+    },
+    "7b7febc2-d5be-6a43-ddf7-236f90b45904": {
+      "ProjectGuid": "7b7febc2-d5be-6a43-ddf7-236f90b45904",
+      "DisplayName": "Unity.2D.Animation.Editor",
+      "ColorIndex": 2
+    },
+    "e1d605c2-6602-fd64-6c0c-1fd08b5e67cb": {
+      "ProjectGuid": "e1d605c2-6602-fd64-6c0c-1fd08b5e67cb",
+      "DisplayName": "Unity.2D.Tilemap.Editor",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
